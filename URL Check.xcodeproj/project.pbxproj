@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		F638CCF02541C7C6008D9940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F638CCEF2541C7C6008D9940 /* Assets.xcassets */; };
 		F638CCF32541C7C6008D9940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F638CCF12541C7C6008D9940 /* LaunchScreen.storyboard */; };
 		F638CCFC2541CA4B008D9940 /* GoogleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638CCFB2541CA4B008D9940 /* GoogleAPI.swift */; };
+		F6E3E1542541D0A0005297EB /* GoogleSafeBrowsingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3E1532541D0A0005297EB /* GoogleSafeBrowsingAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F638CCF22541C7C6008D9940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F638CCF42541C7C6008D9940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F638CCFB2541CA4B008D9940 /* GoogleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPI.swift; sourceTree = "<group>"; };
+		F6E3E1532541D0A0005297EB /* GoogleSafeBrowsingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSafeBrowsingAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,6 @@
 				6D08EBB89AC677A37523748C /* Pods-URL Check.debug.xcconfig */,
 				B1E436A8B1C6C1AA218C07C8 /* Pods-URL Check.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,7 +86,7 @@
 			children = (
 				F638CCE62541C7C1008D9940 /* AppDelegate.swift */,
 				F638CCE82541C7C1008D9940 /* SceneDelegate.swift */,
-				F638CCFB2541CA4B008D9940 /* GoogleAPI.swift */,
+				F6E3E1522541D085005297EB /* API */,
 				F638CCEA2541C7C1008D9940 /* MainVC.swift */,
 				F638CCEC2541C7C1008D9940 /* Main.storyboard */,
 				F638CCEF2541C7C6008D9940 /* Assets.xcassets */,
@@ -93,6 +94,15 @@
 				F638CCF42541C7C6008D9940 /* Info.plist */,
 			);
 			path = "URL Check";
+			sourceTree = "<group>";
+		};
+		F6E3E1522541D085005297EB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F638CCFB2541CA4B008D9940 /* GoogleAPI.swift */,
+				F6E3E1532541D0A0005297EB /* GoogleSafeBrowsingAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +223,7 @@
 				F638CCFC2541CA4B008D9940 /* GoogleAPI.swift in Sources */,
 				F638CCE72541C7C1008D9940 /* AppDelegate.swift in Sources */,
 				F638CCE92541C7C1008D9940 /* SceneDelegate.swift in Sources */,
+				F6E3E1542541D0A0005297EB /* GoogleSafeBrowsingAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
