@@ -15,6 +15,7 @@
 		F638CCF02541C7C6008D9940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F638CCEF2541C7C6008D9940 /* Assets.xcassets */; };
 		F638CCF32541C7C6008D9940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F638CCF12541C7C6008D9940 /* LaunchScreen.storyboard */; };
 		F638CCFC2541CA4B008D9940 /* GoogleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638CCFB2541CA4B008D9940 /* GoogleAPI.swift */; };
+		F685F211254311A700ADD6C8 /* ScanQRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F210254311A700ADD6C8 /* ScanQRVC.swift */; };
 		F6E3E1542541D0A0005297EB /* GoogleSafeBrowsingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3E1532541D0A0005297EB /* GoogleSafeBrowsingAPI.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		F638CCF22541C7C6008D9940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F638CCF42541C7C6008D9940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F638CCFB2541CA4B008D9940 /* GoogleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPI.swift; sourceTree = "<group>"; };
+		F685F210254311A700ADD6C8 /* ScanQRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRVC.swift; sourceTree = "<group>"; };
 		F6E3E1532541D0A0005297EB /* GoogleSafeBrowsingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSafeBrowsingAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,13 +89,22 @@
 				F638CCE62541C7C1008D9940 /* AppDelegate.swift */,
 				F638CCE82541C7C1008D9940 /* SceneDelegate.swift */,
 				F6E3E1522541D085005297EB /* API */,
-				F638CCEA2541C7C1008D9940 /* MainVC.swift */,
+				F685F20E2542FBF100ADD6C8 /* Home */,
 				F638CCEC2541C7C1008D9940 /* Main.storyboard */,
 				F638CCEF2541C7C6008D9940 /* Assets.xcassets */,
 				F638CCF12541C7C6008D9940 /* LaunchScreen.storyboard */,
 				F638CCF42541C7C6008D9940 /* Info.plist */,
 			);
 			path = "URL Check";
+			sourceTree = "<group>";
+		};
+		F685F20E2542FBF100ADD6C8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F638CCEA2541C7C1008D9940 /* MainVC.swift */,
+				F685F210254311A700ADD6C8 /* ScanQRVC.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		F6E3E1522541D085005297EB /* API */ = {
@@ -219,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F685F211254311A700ADD6C8 /* ScanQRVC.swift in Sources */,
 				F638CCEB2541C7C1008D9940 /* MainVC.swift in Sources */,
 				F638CCFC2541CA4B008D9940 /* GoogleAPI.swift in Sources */,
 				F638CCE72541C7C1008D9940 /* AppDelegate.swift in Sources */,
