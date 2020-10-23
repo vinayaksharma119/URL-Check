@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iGB-f0-hA6">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="URL_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="121" translatesAutoresizingMaskIntoConstraints="NO" id="A6T-0M-69A">
-                                <rect key="frame" x="42" y="214" width="330" height="491"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="yI8-V0-QDZ">
+                                <rect key="frame" x="45" y="175" width="300" height="478"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Og3-wc-ISx">
-                                        <rect key="frame" x="0.0" y="0.0" width="330" height="185"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="220"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="185" id="X7Z-Nf-Q16"/>
+                                            <constraint firstAttribute="height" constant="220" id="Kj2-t5-00Z"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="36"/>
                                         <state key="normal" title="QR Scan">
@@ -34,10 +34,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vr-8Z-XTy">
-                                        <rect key="frame" x="0.0" y="306" width="330" height="185"/>
+                                        <rect key="frame" x="0.0" y="258" width="300" height="220"/>
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="185" id="eJz-MI-r4f"/>
+                                            <constraint firstAttribute="height" constant="220" id="Pzf-uA-bCn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="36"/>
                                         <state key="normal" title="Enter link">
@@ -50,10 +50,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A6T-0M-69A" secondAttribute="trailing" constant="42" id="EGh-FB-rbS"/>
-                            <constraint firstItem="A6T-0M-69A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="Lax-bH-Bmx"/>
-                            <constraint firstItem="A6T-0M-69A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="XXZ-gs-ldh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A6T-0M-69A" secondAttribute="bottom" constant="157" id="dJE-p1-uUD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yI8-V0-QDZ" secondAttribute="trailing" constant="45" id="FXd-ng-ski"/>
+                            <constraint firstItem="yI8-V0-QDZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="gUO-zD-dBh"/>
+                            <constraint firstItem="yI8-V0-QDZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="qXN-GN-DbF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="yw4-dn-3AC"/>
@@ -62,34 +61,84 @@
             </objects>
             <point key="canvasLocation" x="880" y="94"/>
         </scene>
-        <!--Scan QR-->
+        <!--ScanQRVC-->
         <scene sceneID="tY2-18-6Sa">
             <objects>
-                <viewController id="Xvx-3m-hr4" sceneMemberID="viewController">
+                <viewController id="Xvx-3m-hr4" customClass="ScanQRVC" customModule="URL_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FuL-vS-MUF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qBK-T7-7Ol">
-                                <rect key="frame" x="92" y="338" width="230" height="220"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="My Post" translatesAutoresizingMaskIntoConstraints="NO" id="qBK-T7-7Ol">
+                                <rect key="frame" x="80" y="312" width="230" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="230" id="4Ow-ZY-mHL"/>
                                     <constraint firstAttribute="height" constant="220" id="DcO-ey-hgj"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUo-kz-XrT">
+                                <rect key="frame" x="0.0" y="741" width="390" height="69"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="217" translatesAutoresizingMaskIntoConstraints="NO" id="vOM-ot-beU">
+                                        <rect key="frame" x="45" y="11" width="300" height="47"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nME-U9-crU">
+                                                <rect key="frame" x="0.0" y="0.0" width="39" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="39" id="nuu-Tu-c5P"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="flashlight.off.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="toggleFlash:" destination="Xvx-3m-hr4" eventType="touchUpInside" id="W6U-Bd-JK3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Df0-Jh-44T">
+                                                <rect key="frame" x="256" y="0.0" width="44" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="Jhy-Em-SbE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelTapped:" destination="Xvx-3m-hr4" eventType="touchUpInside" id="pmS-a8-Eyv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.57874036815068497" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vOM-ot-beU" secondAttribute="trailing" constant="45" id="1Dp-sU-FVz"/>
+                                    <constraint firstItem="vOM-ot-beU" firstAttribute="leading" secondItem="RUo-kz-XrT" secondAttribute="leading" constant="45" id="1Md-Df-DgN"/>
+                                    <constraint firstItem="vOM-ot-beU" firstAttribute="top" secondItem="RUo-kz-XrT" secondAttribute="top" constant="11" id="aXx-rE-6H1"/>
+                                    <constraint firstAttribute="bottom" secondItem="vOM-ot-beU" secondAttribute="bottom" constant="11" id="nGc-4G-sNs"/>
+                                    <constraint firstAttribute="height" constant="69" id="teU-EM-2FF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F3p-0L-e3e"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="RUo-kz-XrT" firstAttribute="trailing" secondItem="F3p-0L-e3e" secondAttribute="trailing" id="0fm-l7-ibt"/>
                             <constraint firstItem="qBK-T7-7Ol" firstAttribute="centerY" secondItem="FuL-vS-MUF" secondAttribute="centerY" id="8oC-D6-SbX"/>
+                            <constraint firstItem="RUo-kz-XrT" firstAttribute="leading" secondItem="F3p-0L-e3e" secondAttribute="leading" id="P2b-21-Gpy"/>
+                            <constraint firstItem="RUo-kz-XrT" firstAttribute="bottom" secondItem="F3p-0L-e3e" secondAttribute="bottom" id="QoV-sl-1ye"/>
                             <constraint firstItem="qBK-T7-7Ol" firstAttribute="centerX" secondItem="FuL-vS-MUF" secondAttribute="centerX" id="ZbF-2l-OWy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Scan QR" id="1Jy-Zg-zik"/>
+                    <navigationItem key="navigationItem" id="1Jy-Zg-zik"/>
+                    <connections>
+                        <outlet property="buttonView" destination="RUo-kz-XrT" id="hwl-hA-1dl"/>
+                        <outlet property="flashLightButton" destination="nME-U9-crU" id="s9Z-Yx-EXa"/>
+                        <outlet property="squareImage" destination="qBK-T7-7Ol" id="5v9-5Z-A02"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I25-2m-qSa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642" y="-143"/>
+            <point key="canvasLocation" x="1641.5384615384614" y="-143.60189573459715"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EBW-1H-y3M">
@@ -97,7 +146,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iGB-f0-hA6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="p4p-vI-wR5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -111,6 +160,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="My Post" width="2560" height="2560"/>
+        <image name="flashlight.off.fill" catalog="system" width="76" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

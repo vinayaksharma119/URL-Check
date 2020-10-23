@@ -13,6 +13,10 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.navigationBar.isHidden = false
+    }
 
 
 }
