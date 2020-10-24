@@ -79,15 +79,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUo-kz-XrT">
                                 <rect key="frame" x="0.0" y="741" width="390" height="69"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="217" translatesAutoresizingMaskIntoConstraints="NO" id="vOM-ot-beU">
-                                        <rect key="frame" x="45" y="11" width="300" height="47"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="vOM-ot-beU">
+                                        <rect key="frame" x="30" y="13" width="330" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nME-U9-crU">
-                                                <rect key="frame" x="0.0" y="0.0" width="39" height="47"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="39" id="nuu-Tu-c5P"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="flashlight.off.fill" catalog="system"/>
                                                 <connections>
@@ -95,11 +92,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Df0-Jh-44T">
-                                                <rect key="frame" x="256" y="0.0" width="44" height="47"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="47" id="Jhy-Em-SbE"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                                <rect key="frame" x="255" y="0.0" width="75" height="42"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Cancel"/>
                                                 <connections>
@@ -109,13 +103,13 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.57874036815068497" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="vOM-ot-beU" secondAttribute="trailing" constant="45" id="1Dp-sU-FVz"/>
-                                    <constraint firstItem="vOM-ot-beU" firstAttribute="leading" secondItem="RUo-kz-XrT" secondAttribute="leading" constant="45" id="1Md-Df-DgN"/>
-                                    <constraint firstItem="vOM-ot-beU" firstAttribute="top" secondItem="RUo-kz-XrT" secondAttribute="top" constant="11" id="aXx-rE-6H1"/>
-                                    <constraint firstAttribute="bottom" secondItem="vOM-ot-beU" secondAttribute="bottom" constant="11" id="nGc-4G-sNs"/>
+                                    <constraint firstItem="vOM-ot-beU" firstAttribute="leading" secondItem="RUo-kz-XrT" secondAttribute="leading" constant="30" id="Qes-96-SQT"/>
+                                    <constraint firstItem="vOM-ot-beU" firstAttribute="top" secondItem="RUo-kz-XrT" secondAttribute="top" constant="13" id="Ums-tB-oTV"/>
+                                    <constraint firstAttribute="bottom" secondItem="vOM-ot-beU" secondAttribute="bottom" constant="14" id="apt-lM-NuF"/>
                                     <constraint firstAttribute="height" constant="69" id="teU-EM-2FF"/>
+                                    <constraint firstAttribute="trailing" secondItem="vOM-ot-beU" secondAttribute="trailing" constant="30" id="uZG-sa-fV9"/>
                                 </constraints>
                             </view>
                         </subviews>

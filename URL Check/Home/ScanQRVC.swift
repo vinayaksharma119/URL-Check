@@ -9,25 +9,26 @@ import UIKit
 import AVFoundation
 
 class ScanQRVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-
     
     @IBOutlet weak var squareImage: UIImageView!
     @IBOutlet weak var buttonView: UIView!
     
     @IBOutlet weak var flashLightButton: UIButton!
     
-    
     var video = AVCaptureVideoPreviewLayer()
     var session = AVCaptureSession()
+    var checkFlashLight = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
+        flashLightButton.layer.cornerRadius = 20
         prepareCapture()
     }
     
     func prepareCapture() {
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else { return }
+        
         
         do {
             let input = try AVCaptureDeviceInput(device: captureDevice)
@@ -59,11 +60,44 @@ class ScanQRVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
-        
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func toggleFlash(_ sender: Any) {
+        if checkFlashLight == false {
+            toggleTorch(on: true)
+        }
+        else if checkFlashLight == true {
+            toggleTorch(on: false)
+        }
     }
     
+    func toggleTorch(on: Bool) {
+        guard let device = AVCaptureDevice.default(for: .video) else { return }
+
+        if device.hasTorch {
+            do {
+                checkFlashLight = true
+                try device.lockForConfiguration()
+
+                if on == true {
+                    device.torchMode = .on
+                    flashLightButton.backgroundColor = .white
+                    flashLightButton.tintColor = .blue
+                } else {
+                    checkFlashLight = false
+                    device.torchMode = .off
+                    flashLightButton.backgroundColor = .clear
+                    flashLightButton.tintColor = .white
+                }
+
+                device.unlockForConfiguration()
+            } catch {
+                print("Torch could not be used")
+            }
+        } else {
+            print("Torch is not available")
+        }
+    }
     
 }
