@@ -11,7 +11,7 @@ import Alamofire
 
 class GoogleSafeBrowsingAPI {
     
-    func checkURLSafe(_ url: String, completion: @escaping (_ result: Bool?) -> Void ) {
+    static func checkURLSafe(_ url: String, completion: @escaping (_ result: Bool?) -> Void ) {
 
         let client              = ["clientId":"URL-check", "clientVersion":"1.0"]
         let threatTypes         = ["MALWARE", "SOCIAL_ENGINEERING", "UNWANTED_SOFTWARE",
@@ -25,7 +25,6 @@ class GoogleSafeBrowsingAPI {
                                     AnyObject]
 
         AF.request("https://safebrowsing.googleapis.com/v4/threatMatches:find?key=\(GoogleAPI.googleAPIKey)", method: .post,parameters: paras, encoding: JSONEncoding.default).responseJSON { (response) in
-
             switch response.result {
             case .success:
                 let result = JSON(response.value!).count == 0

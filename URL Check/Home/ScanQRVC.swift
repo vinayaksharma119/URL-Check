@@ -29,7 +29,6 @@ class ScanQRVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     func prepareCapture() {
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else { return }
         
-        
         do {
             let input = try AVCaptureDeviceInput(device: captureDevice)
             session.addInput(input)
@@ -53,10 +52,29 @@ class ScanQRVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         if metadataObjects.count != 0 {
             if let object = metadataObjects[0] as? AVMetadataMachineReadableCodeObject {
                 if object.type == AVMetadataObject.ObjectType.qr {
-                    
+                    if qrCodeContentIsURL(object.stringValue!) {
+                        GoogleSafeBrowsingAPI.checkURLSafe(object.stringValue!) { (result) in
+                            if result! {
+                                self.presentAlert(withTitle: "Passed", message: "\(object.stringValue!) \n Looks safe")
+                                } else {
+                                    self.presentAlert(withTitle: "Failed", message: "\(object.stringValue!) \n looks unsafe")
+                                }
+                        }
+                    }
+                    else {
+                        self.presentAlert(withTitle: "Try again", message: "It is not a URL")
+                    }
+                
                 }
             }
         }
+    }
+    
+    func qrCodeContentIsURL(_ source:String) -> Bool {
+        if let url = URL(string: source) {
+            return UIApplication.shared.canOpenURL(url)
+        }
+        return false
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
@@ -99,5 +117,4 @@ class ScanQRVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             print("Torch is not available")
         }
     }
-    
 }
