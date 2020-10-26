@@ -43,6 +43,9 @@
                                         <state key="normal" title="Enter link">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="dzO-wG-dnL" kind="show" id="1Gs-KX-qkt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -60,6 +63,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="880" y="94"/>
+        </scene>
+        <!--Check link-->
+        <scene sceneID="db4-AM-jqh">
+            <objects>
+                <viewController id="dzO-wG-dnL" customClass="CheckLinkVC" customModule="URL_Check" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Az-Mc-bom">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lKo-0h-wtF">
+                                <rect key="frame" x="16" y="140" width="358" height="32"/>
+                                <segments>
+                                    <segment title="Check google safe"/>
+                                    <segment title="Expand shorten URL"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentDidChange:" destination="dzO-wG-dnL" eventType="valueChanged" id="jkN-v4-QQt"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ZV-em-FHg">
+                                <rect key="frame" x="0.0" y="176" width="390" height="668"/>
+                                <connections>
+                                    <segue destination="DbE-DC-b2Q" kind="embed" id="2f8-2J-tPb"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ir-cO-x0e">
+                                <rect key="frame" x="0.0" y="176" width="390" height="668"/>
+                                <connections>
+                                    <segue destination="mhA-os-FXX" kind="embed" id="Ysx-B4-3gG"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zF1-wX-raV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lKo-0h-wtF" firstAttribute="top" secondItem="zF1-wX-raV" secondAttribute="top" id="5vp-wb-Gnv"/>
+                            <constraint firstItem="3Ir-cO-x0e" firstAttribute="top" secondItem="lKo-0h-wtF" secondAttribute="bottom" constant="5" id="KRp-xS-Jw9"/>
+                            <constraint firstItem="lKo-0h-wtF" firstAttribute="leading" secondItem="zF1-wX-raV" secondAttribute="leading" constant="16" id="MKO-Wb-tY3"/>
+                            <constraint firstItem="zF1-wX-raV" firstAttribute="trailing" secondItem="3Ir-cO-x0e" secondAttribute="trailing" id="MYw-eW-rqx"/>
+                            <constraint firstAttribute="bottom" secondItem="3Ir-cO-x0e" secondAttribute="bottom" id="NbK-w2-j9H"/>
+                            <constraint firstItem="zF1-wX-raV" firstAttribute="trailing" secondItem="lKo-0h-wtF" secondAttribute="trailing" constant="16" id="Qjy-zE-J80"/>
+                            <constraint firstItem="1ZV-em-FHg" firstAttribute="leading" secondItem="zF1-wX-raV" secondAttribute="leading" id="U76-aD-Qby"/>
+                            <constraint firstItem="1ZV-em-FHg" firstAttribute="top" secondItem="lKo-0h-wtF" secondAttribute="bottom" constant="5" id="b8B-8h-xVV"/>
+                            <constraint firstItem="zF1-wX-raV" firstAttribute="trailing" secondItem="1ZV-em-FHg" secondAttribute="trailing" id="btT-Mc-5am"/>
+                            <constraint firstAttribute="bottom" secondItem="1ZV-em-FHg" secondAttribute="bottom" id="kSj-WS-MLA"/>
+                            <constraint firstItem="3Ir-cO-x0e" firstAttribute="leading" secondItem="zF1-wX-raV" secondAttribute="leading" id="nfT-nO-0yz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Check link" id="yp7-Dj-fiv"/>
+                    <connections>
+                        <outlet property="checkGoogleSafeView" destination="1ZV-em-FHg" id="nRr-Um-ir0"/>
+                        <outlet property="urlDestinationView" destination="3Ir-cO-x0e" id="ZTF-tN-jIy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMZ-qd-WdG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656.9230769230769" y="509.71563981042652"/>
         </scene>
         <!--ScanQRVC-->
         <scene sceneID="tY2-18-6Sa">
@@ -152,12 +212,88 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="4wD-8g-I3R">
+            <objects>
+                <viewController id="DbE-DC-b2Q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2sf-xk-Qoh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="668"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="check link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pef-XI-eqH">
+                                <rect key="frame" x="157" y="323.66666666666669" width="76.333333333333314" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZgM-wn-ijj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pef-XI-eqH" firstAttribute="centerY" secondItem="2sf-xk-Qoh" secondAttribute="centerY" id="817-Fk-Dl5"/>
+                            <constraint firstItem="Pef-XI-eqH" firstAttribute="centerX" secondItem="2sf-xk-Qoh" secondAttribute="centerX" id="o0a-d0-xAI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esB-g2-IMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2397" y="1072"/>
+        </scene>
+        <!--Check Link-->
+        <scene sceneID="Hcr-1I-SE8">
+            <objects>
+                <viewController id="mhA-os-FXX" customClass="CheckLink" customModule="URL_Check" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c9o-OC-jQl">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="668"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sUd-ql-Ybd">
+                                <rect key="frame" x="16" y="99" width="358" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j06-Ps-wWT">
+                                <rect key="frame" x="16" y="183" width="358" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2Vu-52-Cv4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
+                                <state key="normal" title="Check">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cj4-3N-UvK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="j06-Ps-wWT" secondAttribute="bottom" constant="435" id="0eh-0N-LmQ"/>
+                            <constraint firstItem="j06-Ps-wWT" firstAttribute="leading" secondItem="c9o-OC-jQl" secondAttribute="leadingMargin" id="625-tG-FtT"/>
+                            <constraint firstItem="sUd-ql-Ybd" firstAttribute="leading" secondItem="c9o-OC-jQl" secondAttribute="leadingMargin" id="Ed8-rm-AvI"/>
+                            <constraint firstItem="sUd-ql-Ybd" firstAttribute="trailing" secondItem="c9o-OC-jQl" secondAttribute="trailingMargin" id="Kil-kE-rn2"/>
+                            <constraint firstItem="j06-Ps-wWT" firstAttribute="trailing" secondItem="c9o-OC-jQl" secondAttribute="trailingMargin" id="SmO-eB-zbR"/>
+                            <constraint firstItem="sUd-ql-Ybd" firstAttribute="top" secondItem="c9o-OC-jQl" secondAttribute="topMargin" constant="55" id="Uai-dd-LwH"/>
+                            <constraint firstItem="j06-Ps-wWT" firstAttribute="top" secondItem="sUd-ql-Ybd" secondAttribute="bottom" constant="50" id="gVX-Ic-gjL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkLinkButton" destination="j06-Ps-wWT" id="jnJ-2K-x81"/>
+                        <outlet property="linkTextField" destination="sUd-ql-Ybd" id="Fg9-QO-fsE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zlQ-Ku-5wx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2396.9230769230767" y="444.31279620853081"/>
+        </scene>
     </scenes>
     <resources>
         <image name="My Post" width="2560" height="2560"/>
         <image name="flashlight.off.fill" catalog="system" width="76" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
