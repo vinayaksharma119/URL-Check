@@ -39,7 +39,7 @@ class ExpandLinkVC: UIViewController {
             DispatchQueue.main.async {
                 self.expandLinkButton.hideLoading()
                 self.expandLinkButton.alpha = 1
-                self.presentAlert(withTitle: "It goes to \n", message: expandedURL!)
+                self.presentAlert(withTitle: "It goes to \n", message: expandedURL ?? " Error not a url")
             }
         }.resume()
     }
