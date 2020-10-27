@@ -17,10 +17,12 @@
 		F638CCFC2541CA4B008D9940 /* GoogleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F638CCFB2541CA4B008D9940 /* GoogleAPI.swift */; };
 		F6542A452546DE98000D0919 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6542A442546DE98000D0919 /* DismissKeyboard.swift */; };
 		F65F0085254461F30083DF53 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65F0084254461F30083DF53 /* Alert.swift */; };
-		F67F43E8254557390002D516 /* CheckLinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F43E7254557390002D516 /* CheckLinkVC.swift */; };
-		F68187B32545EC0C00F1B6FB /* CheckLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68187B22545EC0C00F1B6FB /* CheckLink.swift */; };
+		F67F43E8254557390002D516 /* CheckLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67F43E7254557390002D516 /* CheckLink.swift */; };
+		F68187B32545EC0C00F1B6FB /* CheckLinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68187B22545EC0C00F1B6FB /* CheckLinkVC.swift */; };
 		F685F211254311A700ADD6C8 /* ScanQRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F685F210254311A700ADD6C8 /* ScanQRVC.swift */; };
+		F6CC0347254828CA004AD8F7 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CC0346254828CA004AD8F7 /* LoadingButton.swift */; };
 		F6E3E1542541D0A0005297EB /* GoogleSafeBrowsingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3E1532541D0A0005297EB /* GoogleSafeBrowsingAPI.swift */; };
+		F6FFEDB8254733C1006F020D /* ExpandLinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FFEDB7254733C1006F020D /* ExpandLinkVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +40,12 @@
 		F638CCFB2541CA4B008D9940 /* GoogleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPI.swift; sourceTree = "<group>"; };
 		F6542A442546DE98000D0919 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		F65F0084254461F30083DF53 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		F67F43E7254557390002D516 /* CheckLinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLinkVC.swift; sourceTree = "<group>"; };
-		F68187B22545EC0C00F1B6FB /* CheckLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLink.swift; sourceTree = "<group>"; };
+		F67F43E7254557390002D516 /* CheckLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLink.swift; sourceTree = "<group>"; };
+		F68187B22545EC0C00F1B6FB /* CheckLinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLinkVC.swift; sourceTree = "<group>"; };
 		F685F210254311A700ADD6C8 /* ScanQRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRVC.swift; sourceTree = "<group>"; };
+		F6CC0346254828CA004AD8F7 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		F6E3E1532541D0A0005297EB /* GoogleSafeBrowsingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSafeBrowsingAPI.swift; sourceTree = "<group>"; };
+		F6FFEDB7254733C1006F020D /* ExpandLinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandLinkVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 			children = (
 				F638CCE62541C7C1008D9940 /* AppDelegate.swift */,
 				F638CCE82541C7C1008D9940 /* SceneDelegate.swift */,
+				F6CC0346254828CA004AD8F7 /* LoadingButton.swift */,
 				F65F0083254461DC0083DF53 /* Extensions */,
 				F6E3E1522541D085005297EB /* API */,
 				F685F20E2542FBF100ADD6C8 /* Home */,
@@ -119,7 +124,8 @@
 		F68187B12545EBE400F1B6FB /* Segmented Control */ = {
 			isa = PBXGroup;
 			children = (
-				F68187B22545EC0C00F1B6FB /* CheckLink.swift */,
+				F68187B22545EC0C00F1B6FB /* CheckLinkVC.swift */,
+				F6FFEDB7254733C1006F020D /* ExpandLinkVC.swift */,
 			);
 			path = "Segmented Control";
 			sourceTree = "<group>";
@@ -129,7 +135,7 @@
 			children = (
 				F638CCEA2541C7C1008D9940 /* MainVC.swift */,
 				F685F210254311A700ADD6C8 /* ScanQRVC.swift */,
-				F67F43E7254557390002D516 /* CheckLinkVC.swift */,
+				F67F43E7254557390002D516 /* CheckLink.swift */,
 				F68187B12545EBE400F1B6FB /* Segmented Control */,
 			);
 			path = Home;
@@ -258,16 +264,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6CC0347254828CA004AD8F7 /* LoadingButton.swift in Sources */,
 				F685F211254311A700ADD6C8 /* ScanQRVC.swift in Sources */,
-				F67F43E8254557390002D516 /* CheckLinkVC.swift in Sources */,
+				F67F43E8254557390002D516 /* CheckLink.swift in Sources */,
 				F638CCEB2541C7C1008D9940 /* MainVC.swift in Sources */,
 				F638CCFC2541CA4B008D9940 /* GoogleAPI.swift in Sources */,
 				F638CCE72541C7C1008D9940 /* AppDelegate.swift in Sources */,
 				F638CCE92541C7C1008D9940 /* SceneDelegate.swift in Sources */,
 				F6E3E1542541D0A0005297EB /* GoogleSafeBrowsingAPI.swift in Sources */,
-				F68187B32545EC0C00F1B6FB /* CheckLink.swift in Sources */,
+				F68187B32545EC0C00F1B6FB /* CheckLinkVC.swift in Sources */,
 				F65F0085254461F30083DF53 /* Alert.swift in Sources */,
 				F6542A452546DE98000D0919 /* DismissKeyboard.swift in Sources */,
+				F6FFEDB8254733C1006F020D /* ExpandLinkVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -67,7 +67,7 @@
         <!--Check link-->
         <scene sceneID="db4-AM-jqh">
             <objects>
-                <viewController id="dzO-wG-dnL" customClass="CheckLinkVC" customModule="URL_Check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dzO-wG-dnL" customClass="CheckLink" customModule="URL_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Az-Mc-bom">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,47 +212,71 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Expand LinkVC-->
         <scene sceneID="4wD-8g-I3R">
             <objects>
-                <viewController id="DbE-DC-b2Q" sceneMemberID="viewController">
+                <viewController id="DbE-DC-b2Q" customClass="ExpandLinkVC" customModule="URL_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2sf-xk-Qoh">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="668"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="check link" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pef-XI-eqH">
-                                <rect key="frame" x="157" y="323.66666666666669" width="76.333333333333314" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="iSU-a0-rw0">
+                                <rect key="frame" x="11" y="99" width="368" height="138"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter link" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xHM-gb-mLO">
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFw-1N-rLO" customClass="LoadingButton" customModule="URL_Check" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="88" width="368" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ADL-px-hkp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="23"/>
+                                        <state key="normal" title="Expand">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="checkLinkButtonClicked:" destination="mhA-os-FXX" eventType="touchUpInside" id="gjy-QP-tCI"/>
+                                            <action selector="expandLinkButtonClicked:" destination="DbE-DC-b2Q" eventType="touchUpInside" id="DKk-Yh-Q8e"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZgM-wn-ijj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Pef-XI-eqH" firstAttribute="centerY" secondItem="2sf-xk-Qoh" secondAttribute="centerY" id="817-Fk-Dl5"/>
-                            <constraint firstItem="Pef-XI-eqH" firstAttribute="centerX" secondItem="2sf-xk-Qoh" secondAttribute="centerX" id="o0a-d0-xAI"/>
+                            <constraint firstItem="iSU-a0-rw0" firstAttribute="top" secondItem="ZgM-wn-ijj" secondAttribute="top" constant="55" id="3S0-DB-9wa"/>
+                            <constraint firstItem="ZgM-wn-ijj" firstAttribute="trailing" secondItem="iSU-a0-rw0" secondAttribute="trailing" constant="11" id="nbI-cF-9xb"/>
+                            <constraint firstItem="iSU-a0-rw0" firstAttribute="leading" secondItem="ZgM-wn-ijj" secondAttribute="leading" constant="11" id="xqu-EZ-Bhz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="expandLinkButton" destination="GFw-1N-rLO" id="mwz-gH-mvK"/>
+                        <outlet property="linkTextField" destination="xHM-gb-mLO" id="bdW-Sa-7pC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esB-g2-IMm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2397" y="1072"/>
         </scene>
-        <!--Check Link-->
+        <!--Check LinkVC-->
         <scene sceneID="Hcr-1I-SE8">
             <objects>
-                <viewController id="mhA-os-FXX" customClass="CheckLink" customModule="URL_Check" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mhA-os-FXX" customClass="CheckLinkVC" customModule="URL_Check" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c9o-OC-jQl">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="668"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sUd-ql-Ybd">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter link" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sUd-ql-Ybd">
                                 <rect key="frame" x="16" y="99" width="358" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j06-Ps-wWT">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j06-Ps-wWT" customClass="LoadingButton" customModule="URL_Check" customModuleProvider="target">
                                 <rect key="frame" x="16" y="183" width="358" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
@@ -262,6 +286,9 @@
                                 <state key="normal" title="Check">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkLinkButtonClicked:" destination="mhA-os-FXX" eventType="touchUpInside" id="j2C-ja-9LC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cj4-3N-UvK"/>

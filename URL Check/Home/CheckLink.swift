@@ -1,5 +1,5 @@
 //
-//  CheckLinkVC.swift
+//  CheckLink.swift
 //  URL Check
 //
 //  Created by Vinayak Sharma on 25/10/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CheckLinkVC: UIViewController {
+class CheckLink: UIViewController {
     
     
     @IBOutlet weak var checkGoogleSafeView: UIView!
