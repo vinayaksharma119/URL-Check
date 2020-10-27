@@ -226,7 +226,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter link" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xHM-gb-mLO">
                                         <rect key="frame" x="0.0" y="0.0" width="368" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFw-1N-rLO" customClass="LoadingButton" customModule="URL_Check" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="368" height="50"/>
@@ -274,7 +274,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter link" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sUd-ql-Ybd">
                                 <rect key="frame" x="16" y="99" width="358" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j06-Ps-wWT" customClass="LoadingButton" customModule="URL_Check" customModuleProvider="target">
                                 <rect key="frame" x="16" y="183" width="358" height="50"/>
@@ -294,7 +294,6 @@
                         <viewLayoutGuide key="safeArea" id="cj4-3N-UvK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="j06-Ps-wWT" secondAttribute="bottom" constant="435" id="0eh-0N-LmQ"/>
                             <constraint firstItem="j06-Ps-wWT" firstAttribute="leading" secondItem="c9o-OC-jQl" secondAttribute="leadingMargin" id="625-tG-FtT"/>
                             <constraint firstItem="sUd-ql-Ybd" firstAttribute="leading" secondItem="c9o-OC-jQl" secondAttribute="leadingMargin" id="Ed8-rm-AvI"/>
                             <constraint firstItem="sUd-ql-Ybd" firstAttribute="trailing" secondItem="c9o-OC-jQl" secondAttribute="trailingMargin" id="Kil-kE-rn2"/>
