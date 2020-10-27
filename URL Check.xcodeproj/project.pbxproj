@@ -100,7 +100,7 @@
 			children = (
 				F638CCE62541C7C1008D9940 /* AppDelegate.swift */,
 				F638CCE82541C7C1008D9940 /* SceneDelegate.swift */,
-				F6CC0346254828CA004AD8F7 /* LoadingButton.swift */,
+				F6CC034925482EFC004AD8F7 /* Helpers */,
 				F65F0083254461DC0083DF53 /* Extensions */,
 				F6E3E1522541D085005297EB /* API */,
 				F685F20E2542FBF100ADD6C8 /* Home */,
@@ -139,6 +139,14 @@
 				F68187B12545EBE400F1B6FB /* Segmented Control */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		F6CC034925482EFC004AD8F7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F6CC0346254828CA004AD8F7 /* LoadingButton.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F6E3E1522541D085005297EB /* API */ = {
